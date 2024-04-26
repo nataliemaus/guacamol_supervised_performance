@@ -25,6 +25,11 @@ def main(
     all_z, all_y = load_molecule_train_data(
         task_id=task_id,
     )
+    # all_z.shape torch.Size([20000, 256])
+    # all_z.min() tensor(-6.3683)
+    # all_z.max() tensor(7.2140)
+    # all_z.mean() tensor(0.0019)
+
     # shuffle data 
     indices = np.arange(len(all_y))
     indices = np.random.permutation(indices)
